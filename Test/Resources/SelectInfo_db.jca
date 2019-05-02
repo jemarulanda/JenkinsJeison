@@ -1,0 +1,14 @@
+<adapter-config name="SelectInfo" adapter="db" wsdlLocation="SelectInfo.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="Connection1" location="eis/DB/PruebCon"/>
+  <endpoint-interaction portType="SelectInfo_ptt" operation="SelectInfoSelect">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="SelectInfo.Informacion"/>
+      <property name="QueryName" value="SelectInfoSelect"/>
+      <property name="MappingsMetaDataURL" value="SelectInfo-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

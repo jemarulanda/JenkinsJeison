@@ -1,0 +1,32 @@
+<wsdl:definitions
+     name="SelectInfo"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/JenkinsTest/Test/SelectInfo"
+     xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/JenkinsTest/Test/SelectInfo"
+     xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/"
+     xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/SelectInfo"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+  <plt:partnerLinkType name="SelectInfo_plt" >
+    <plt:role name="SelectInfo_role" >
+      <plt:portType name="tns:SelectInfo_ptt" />
+    </plt:role>
+  </plt:partnerLinkType>
+    <wsdl:types>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" >
+        <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/SelectInfo" schemaLocation="SelectInfo_table.xsd" />
+      </schema>
+    </wsdl:types>
+    <wsdl:message name="SelectInfoSelect_inputParameters">
+        <wsdl:part name="SelectInfoSelect_inputParameters" element="top:SelectInfoSelectInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="InformacionCollection_msg">
+        <wsdl:part name="InformacionCollection" element="top:InformacionCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="SelectInfo_ptt">
+        <wsdl:operation name="SelectInfoSelect">
+            <wsdl:input message="tns:SelectInfoSelect_inputParameters"/>
+            <wsdl:output message="tns:InformacionCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,12 @@
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/JenkinsTest/Test/PolingInfo" name="PolingInfo-concrete" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:import location="PolingInfo.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/JenkinsTest/Test/PolingInfo"/>
+    <wsdl:binding name="PolingInfo_ptt-binding" type="pol:PolingInfo_ptt" xmlns:pol="http://xmlns.oracle.com/pcbpel/adapter/db/JenkinsTest/Test/PolingInfo">
+        <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+        <wsdl:operation name="receive">
+            <soap:operation soapAction="receive"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

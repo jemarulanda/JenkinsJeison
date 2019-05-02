@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="INFORMACION.ESTADO:db_column_size">20</entry>
+   <entry key="INFORMACION:db_table_type">TABLE</entry>
+   <entry key="INFORMACION.ESTADO:db_column_not_null">false</entry>
+   <entry key="INFORMACION.ID:db_column_scale">0</entry>
+   <entry key="INFORMACION.ID:db_column_precision">38</entry>
+   <entry key="INFORMACION.PRUEBA:db_column_type">VARCHAR2</entry>
+   <entry key="INFORMACION:db_column_2">PRUEBA</entry>
+   <entry key="INFORMACION:db_column_1">ESTADO</entry>
+   <entry key="INFORMACION.PRUEBA:db_column_size">20</entry>
+   <entry key="INFORMACION:db_column_0">ID</entry>
+   <entry key="return_single_result_set">false</entry>
+   <entry key="INFORMACION.ID:db_column_type">NUMBER</entry>
+   <entry key="INFORMACION.ESTADO:db_column_type">VARCHAR2</entry>
+   <entry key="root_descriptor_alias">INFORMACION</entry>
+   <entry key="INFORMACION.ID:db_column_not_null">true</entry>
+   <entry key="INFORMACION.PRUEBA:db_column_not_null">false</entry>
+</properties>

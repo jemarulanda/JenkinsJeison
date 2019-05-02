@@ -1,0 +1,21 @@
+<adapter-config name="PolingInfo" adapter="db" wsdlLocation="PolingInfo.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="Connection1" location="eis/DB/PruebCon"/>
+  <endpoint-activation portType="PolingInfo_ptt" operation="receive">
+    <activation-spec className="oracle.tip.adapter.db.DBActivationSpec">
+      <property name="DescriptorName" value="PolingInfo.Informacion"/>
+      <property name="QueryName" value="PolingInfoSelect"/>
+      <property name="MappingsMetaDataURL" value="PolingInfo-or-mappings.xml"/>
+      <property name="PollingStrategy" value="LogicalDeletePollingStrategy"/>
+      <property name="MarkReadColumn" value="ESTADO"/>
+      <property name="MarkReadValue" value="PRUE"/>
+      <property name="MarkUnreadValue" value="PDTE"/>
+      <property name="PollingInterval" value="5"/>
+      <property name="MaxRaiseSize" value="1"/>
+      <property name="MaxTransactionSize" value="10"/>
+      <property name="NumberOfThreads" value="1"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+    </activation-spec>
+  </endpoint-activation>
+
+</adapter-config>
